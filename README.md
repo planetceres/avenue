@@ -7,7 +7,7 @@ Avenue is a simulator designed to test and prototype reinforcement learning algo
 ### Quick start
 
 ```bash
-pip install git+https://github.com/ElementAI/Avenue.git 
+pip install git+https://github.com/planetceres/avenue.git 
 ```
 
 ```python
@@ -43,6 +43,21 @@ In all environments the agent controls a car with a two-dimensional, continuous 
 
 ### Performance
 Depending on the environment used, on our laptops `env.step` requires approximately 0.02 seconds, i.e. the simulator runs at 50 frames per second including the interprocess communation between Python and Unity3D.
+
+### Installation
+
+```bash
+conda create -n avenue python=3.8
+conda activate avenue
+
+conda install -c conda-forge \
+  scipy \
+  imageio \
+  gym \
+  pillow
+
+pip install -e .
+```
 
 
 ## Citing
