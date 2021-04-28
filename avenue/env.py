@@ -47,6 +47,7 @@ class UnityEnv(gym.Wrapper):
         if system not in cls.host_ids:
             raise KeyError("There are no assets available for {} on {}".format(cls.asset_name, system))
         id = cls.host_ids[system]
+        print("https://drive.google.com/uc?id="+id, path + ".zip")
         gdown.download("https://drive.google.com/uc?id="+id, path + ".zip", False)
         zip_ref = zipfile.ZipFile(path + '.zip', 'r')
         print('unpacking ...')
